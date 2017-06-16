@@ -16,11 +16,12 @@ var io = require('socket.io').listen(server);
 io.sockets.on('connection', function (socket) {
     console.log('A client is connected!');
     socket.emit('message', 'You are connected!');
-    
+
 });
- 
+
  io.sockets.on('message', function (message) {
         console.log('A client is speaking to me! They’re saying: ' + message);
-    }); 
-
-server.listen(process.env.port);
+    });
+var portC = process.env.PORT || 3000;
+console.log("I am gonna start in port "+portC);
+server.listen(portC);

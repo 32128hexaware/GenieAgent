@@ -14,14 +14,9 @@
   "scripts": {
     "start":"node socketserver.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/32128hexaware/GenieAgent.git"
-  },
+  
   "author": "JP Bose",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/32128hexaware/GenieAgent/issues"
-  },
-  "homepage": "https://github.com/32128hexaware/GenieAgent#readme"
+
+
 }

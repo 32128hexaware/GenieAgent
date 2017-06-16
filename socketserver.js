@@ -23,4 +23,4 @@ io.sockets.on('connection', function (socket) {
         console.log('A client is speaking to me! They’re saying: ' + message);
     }); 
 
-server.listen(5000);
+server.listen(process.env.port);

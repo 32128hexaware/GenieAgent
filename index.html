@@ -11,7 +11,9 @@
         <script src="/socket.io/socket.io.js"></script>
         <script>
             var portCli = process.env.PORT || 3000;
-            var socket = io.connect('http://localhost:'+ portCli);
+            var urlIs = 'http://localhost:'+ portCli;
+            alert('listening to '+urlIs);
+            var socket = io.connect(urlIs);
             socket.on('message', function(message) {
                 alert('The server has a message for you: ' + message);
             });

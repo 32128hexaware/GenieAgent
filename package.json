@@ -14,9 +14,8 @@
   "scripts": {
     "start":"node socketserver.js"
   },
-  
-  "author": "JP Bose",
-  "license": "ISC",
 
+  "author": "JP Bose",
+  "license": "ISC"
 
 }

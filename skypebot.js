@@ -23,10 +23,12 @@ module.exports = class SkypeBot {
     }
 
     get botService() {
+      console.log("Reading bot server "+this._botService);
         return this._botService;
     }
 
     set botService(value) {
+        console.log("Bot server is being set "+value);
         this._botService = value;
     }
 

@@ -3,7 +3,6 @@
 const apiai = require('apiai');
 const express = require('express');
 const bodyParser = require('body-parser');
-var appaiinst = apiai("fa1c6aa88e8e4027a6233cb63f2f73aa");
 
 const SkypeBot = require('./skypebot');
 const SkypeBotConfig = require('./skypebotconfig');
@@ -25,7 +24,7 @@ require('console-stamp')(console, 'yyyy.mm.dd HH:MM:ss.l');
 const app = express();
 app.use(bodyParser.json());
 
-app.post('/chat', skypeBot.botService.listen());
+app.post('/', skypeBot.botService.listen());
 
 app.listen(REST_PORT, function () {
     console.log('Rest service ready on port ' + REST_PORT);

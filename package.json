@@ -21,7 +21,7 @@
     "node-rest-client": "^3.1.0"
   },
   "scripts": {
-    "start":"node hopefullysrv.js"
+    "start":"node app.js"
   },
 
   "author": "JP Bose",

@@ -16,18 +16,18 @@ var options = {
 
  app.post('/',function(req,res){
       console.log('REQUESTTTTT:::'+JSON.stringify(req.body));
-      if(req.body.result.parameters.location1){
-        var resagent="Sure, will check for tkts from " + req.body.result.parameters.location+ " to "+
-        req.body.result.parameters.location1+
-        "   for "+ req.body.result.parameters.date +"   How would you like to travel?by flight,train or bus.....";
+
+
+
+      if(req.body.result.metadata.intentName == 'Default Welcome Intent'){
+        var resagent="I got you buddy";
       }else{
-   var resagent="Alright, will check for tkts to " + req.body.result.parameters.location+
-   "   for"+ req.body.result.parameters.date +"   How would you like to travel?by flight,train or bus.....";
-}
+   var resagent="Sorry, I could not recogonise you";
+      }
       return res.json({
         speech:resagent,
         displayText: resagent,
-        source:'hello ticket book'
+        source:'genieagent'
       });
 
 });

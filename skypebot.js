@@ -44,7 +44,7 @@ module.exports = class SkypeBot {
             language: botConfig.apiaiLang,
             requestSource: "skype"
         };
-console.log("Toke is "+botConfig.apiaiAccessToken);
+        console.log("Toke is "+botConfig.apiaiAccessToken);
         this._apiaiService = apiai(botConfig.apiaiAccessToken, apiaiOptions);
         this._sessionIds = new Map();
 
@@ -64,7 +64,7 @@ console.log("Toke is "+botConfig.apiaiAccessToken);
     }
 
     processMessage(session) {
-
+        console.log("Message is being processed");
         let messageText = session.message.text;
         let sender = session.message.address.conversation.id;
 

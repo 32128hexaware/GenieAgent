@@ -58,6 +58,7 @@ module.exports = class SkypeBot {
         this._bot = new botbuilder.UniversalBot(this.botService);
 
         this._bot.dialog('/', (session) => {
+            console.log("Message is being processed");
             if (session.message && session.message.text) {
                 this.processMessage(session);
             }
@@ -66,7 +67,7 @@ module.exports = class SkypeBot {
     }
 
     processMessage(session) {
-        console.log("Message is being processed");
+
         let messageText = session.message.text;
         let sender = session.message.address.conversation.id;
 

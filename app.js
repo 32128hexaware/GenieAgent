@@ -3,7 +3,7 @@
 const apiai = require('apiai');
 const express = require('express');
 const bodyParser = require('body-parser');
-
+var appaiinst = apiai("fa1c6aa88e8e4027a6233cb63f2f73aa");
 
 const SkypeBot = require('./skypebot');
 const SkypeBotConfig = require('./skypebotconfig');

@@ -1,7 +1,7 @@
 'use strict';
 var apiai = require('apiai');
 
-var appai = apiai("baf498c6d40a4a70b54ef80debdcbc33");
+var appai = apiai("fa1c6aa88e8e4027a6233cb63f2f73aa");
 
 var express=require('express');
 var bodyParser = require('body-parser');

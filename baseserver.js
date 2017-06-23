@@ -24,7 +24,7 @@ var options = {
       }else{
         var resagent="Sorry, I could not recogonise you";
       }
-      console.log("Response is "+res);
+      console.log("Response is "+JSON.stringify(res.body));
       return res.json({
         speech:resagent,
         displayText: resagent,

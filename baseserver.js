@@ -1,6 +1,22 @@
 'use strict';
 var apiai = require('apiai');
 
+var http=require('https');
+var options={
+
+host:'testingwith.herokuapp.com',
+
+port:9620,
+
+path:'/',
+
+method:'POST'
+
+
+
+};
+
+
 var appai = apiai("fa1c6aa88e8e4027a6233cb63f2f73aa");
 
 var express=require('express');
@@ -10,10 +26,23 @@ var portC = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
+/*
 var options = {
     sessionId: '567yh8'
-};
+};*/
 
+ app.post('/',function(req,res){
+   var req1=http.request(options,function(res){
+      return res;
+   });
+   req1.end();
+ }
+
+
+
+
+
+/*
  app.post('/',function(req,res){
       console.log('REQUESTTTTT:::'+JSON.stringify(req.body));
 
@@ -31,7 +60,7 @@ var options = {
         source:'genieagent'
       });
 
-});
+});*/
 
 
 

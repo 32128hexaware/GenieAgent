@@ -22,8 +22,9 @@ var options = {
       if(req.body.result.metadata.intentName == 'Default Welcome Intent'){
         var resagent="I got you buddy";
       }else{
-   var resagent="Sorry, I could not recogonise you";
+        var resagent="Sorry, I could not recogonise you";
       }
+      console.log("Response is "+res);
       return res.json({
         speech:resagent,
         displayText: resagent,

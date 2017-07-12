@@ -17,7 +17,7 @@ function run_main(query1) {
 	//console.log(request);
 	request.on('response', function(response) {
 
-      console.log("Got response it seems")
+      console.log(JSON.stringify(response.body));
 
 	});
 

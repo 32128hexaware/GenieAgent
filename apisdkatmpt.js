@@ -6,8 +6,14 @@ var app = apiai(access_token);
 
 run_main('hi');
 
+
 function run_main(query1) {
-	var request = app.textRequest(query1);
+
+  var options = {
+      sessionId: '567yh8'
+  };
+
+	var request = app.textRequest(query1, options);
 	//console.log(request);
 	request.on('response', function(response) {
 
